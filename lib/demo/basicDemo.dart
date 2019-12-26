@@ -42,6 +42,18 @@ class BasicDemo extends StatelessWidget {
 //                topLeft: Radius.circular(32),
 //                bottomLeft: Radius.circular(32),
 //              ),
+              // 设置阴影
+              boxShadow: [
+                BoxShadow(
+                  // 阴影偏移量 X轴和Y轴
+                  offset: Offset(0, 16.0),
+                  color: Color.fromRGBO(16, 20, 188, 1),
+                  // 模糊程度
+                  blurRadius: 25,
+                  // 阴影扩散程度 ，正数扩大，负数缩小
+                  spreadRadius: -9,
+                ),
+              ],
             ),
           )
         ],
