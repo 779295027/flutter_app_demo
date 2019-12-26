@@ -5,7 +5,48 @@ class BasicDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return RichTextDemo();
+    return Container(
+      color: Colors.grey[100],
+      child: Row(
+        // 主轴，对齐方式
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            child: Icon(
+              Icons.pool,
+              size: 32,
+              color: Colors.white,
+            ),
+//            color: Color.fromRGBO(3, 54, 255, 1),
+            padding: EdgeInsets.all(16),
+            margin: EdgeInsets.only(left: 8, top: 8, right: 8, bottom: 8),
+            width: 90,
+            height: 90,
+            // 装饰 ：装饰盒子0
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(3, 54, 255, 1),
+              // 设置边框，四边可以设置不同的样式
+//                border: Border(
+//                  // 设置顶部边框的样式
+//                  top: BorderSide()
+//                ),
+              // 设置边框,四条边框统一样式
+              border: Border.all(
+                color: Colors.indigoAccent[100],
+                width: 3,
+                style: BorderStyle.solid,
+              ),
+              // 设置四个角的圆角角度
+              borderRadius: BorderRadius.circular(16),
+//              borderRadius: BorderRadius.only(
+//                topLeft: Radius.circular(32),
+//                bottomLeft: Radius.circular(32),
+//              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
 
