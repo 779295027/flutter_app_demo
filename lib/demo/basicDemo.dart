@@ -37,7 +37,7 @@ class BasicDemo extends StatelessWidget {
                 style: BorderStyle.solid,
               ),
               // 设置四个角的圆角角度
-              borderRadius: BorderRadius.circular(16),
+//              borderRadius: BorderRadius.circular(16),
 //              borderRadius: BorderRadius.only(
 //                topLeft: Radius.circular(32),
 //                bottomLeft: Radius.circular(32),
@@ -54,6 +54,9 @@ class BasicDemo extends StatelessWidget {
                   spreadRadius: -9,
                 ),
               ],
+              // 设置形状 当圆形时，不可使用圆角效果
+              shape: BoxShape.circle,
+
             ),
           )
         ],
