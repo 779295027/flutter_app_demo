@@ -6,7 +6,18 @@ class BasicDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      color: Colors.grey[100],
+//      color: Colors.grey[100],
+      decoration: BoxDecoration(
+        image: DecorationImage(
+            image: NetworkImage(
+                "https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=248222817,375547763&fm=26&gp=0.jpg"),
+            alignment: Alignment.topCenter,
+//          repeat: ImageRepeat.repeat,
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+                Colors.indigoAccent[400].withOpacity(0.5),
+                BlendMode.hardLight)),
+      ),
       child: Row(
         // 主轴，对齐方式
         mainAxisAlignment: MainAxisAlignment.center,
@@ -56,9 +67,23 @@ class BasicDemo extends StatelessWidget {
               ],
               // 设置形状 当圆形时，不可使用圆角效果
               shape: BoxShape.circle,
-
+//              gradient: RadialGradient(
+//                colors: [
+//                  Color.fromRGBO(7, 102, 255, 1.0),
+//                  Color.fromRGBO(3, 28, 128, 1.0)
+//                ],
+//              ),
+              gradient: LinearGradient(
+                // 线性渐变
+                colors: [
+                  Color.fromRGBO(7, 102, 255, 1.0),
+                  Color.fromRGBO(3, 28, 128, 1.0)
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
             ),
-          )
+          ),
         ],
       ),
     );
